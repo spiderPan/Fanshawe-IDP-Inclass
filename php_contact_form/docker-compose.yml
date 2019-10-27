@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  php:
+    build: ./.docker/php/
+    volumes:
+      - ./:/var/www/html/
+    ports:
+      - 8080:80
+
+  email:
+    image: mailhog/mailhog
+    ports:
+      - 1025:1025
+      - 8025:8025
+
+volumes:
+  mysql:
