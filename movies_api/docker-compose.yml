@@ -3,7 +3,7 @@ services:
   php:
     build: ./.docker/php/
     volumes:
-      - ./:/var/www/htmdockerl/
+      - ./:/var/www/html/
     ports:
       - 8010:80
     environment:
