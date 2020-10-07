@@ -1,5 +1,12 @@
 version: "3.7"
 services:
+  composer:
+    image: composer
+    working_dir: /app
+    command: install
+    volumes:
+      - ./:/app
+
   php:
     build: ./.docker/php/
     volumes:
@@ -12,24 +19,24 @@ services:
   mysql:
     image: mysql:5.7
     volumes:
-        - mysql:/var/lib/mysql
-        - ./database:/docker-entrypoint-initdb.d
+      - mysql:/var/lib/mysql
+      - ./database:/docker-entrypoint-initdb.d
     restart: always
     environment:
-        MYSQL_ROOT_PASSWORD: root
-        MYSQL_USER: docker_u
-        MYSQL_PASSWORD: docker_p
-        MYSQL_DATABASE: db_movies
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: docker_u
+      MYSQL_PASSWORD: docker_p
+      MYSQL_DATABASE: db_movies
 
   phpmyadmin:
     depends_on:
-        - mysql
+      - mysql
     image: phpmyadmin/phpmyadmin
     ports:
-        - 8011:80
+      - 8011:80
     environment:
-        PMA_HOSTS: mysql
-        PMA_USER: docker_u
-        PMA_PASSWORD: docker_p
+      PMA_HOSTS: mysql
+      PMA_USER: docker_u
+      PMA_PASSWORD: docker_p
 volumes:
   mysql:
