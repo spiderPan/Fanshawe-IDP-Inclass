@@ -16,7 +16,7 @@ services:
     image: mariadb:10.3
     volumes:
       - mysql:/var/lib/mysql
-      - ./db:/docker-entrypoint-initdb.d
+      - ./database:/docker-entrypoint-initdb.d
     restart: always
     ports:
       - 8889:3306
