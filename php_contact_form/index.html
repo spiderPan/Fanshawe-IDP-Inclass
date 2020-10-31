@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mail Ref</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main>
+        <h1 class="hidden">Mail Reference for API Processing</h1>
+        <h2>Some Generic Contact Message Here</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quae aliquid eaque numquam facere ratione molestiae temporibus quibusdam, dolor voluptatibus cupiditate sed error expedita assumenda. Vitae nulla recusandae minima inventore?
+        </p>
+
+        <hr class="separator">
+
+        <h2 class="mail-header">Processing Mail with AJAX</h2>
+
+        <form action="/includes/mail/send.php" method="POST" id="mail-form">
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstname" name="firstname" placeholder="first name" required>
+
+            <label for="lastname">Last Name</label>
+            <input type="text" id="lastname" name="lastname" placeholder="last name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="email" required>
+
+            <label for="message">Your Message</label>
+            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+
+            <div class="submit-wrapper">
+                <span class="submit">Submit</span>
+                <i class="fas fa-paper-plane"></i>
+            </div>
+
+        </form>
+    </main>
+
+    <script src="js/main.js" type="module"></script>
+</body>
+
+</html>

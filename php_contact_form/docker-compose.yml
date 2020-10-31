@@ -5,7 +5,7 @@ services:
     volumes:
       - ./:/var/www/html/
     ports:
-      - 8080:80
+      - 3040:80
 
   email:
     image: mailhog/mailhog

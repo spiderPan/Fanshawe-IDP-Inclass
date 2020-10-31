@@ -1,0 +1,26 @@
+body {
+    background-color: $main-bg-color;
+    color: $main-color;
+
+    font-size: $main-font-size;
+    font-family: $main-font-face;
+}
+
+main {
+    padding: 20px;
+
+    h2 { 
+        text-transform: uppercase;
+        color: $heading-color;
+        font-size: 1.5em;
+        margin-bottom: 0.8em;
+    }
+
+    hr { 
+        width: 80%; 
+        border: 1px solid $heading-color; 
+        margin: 40px 0; 
+    }
+
+    p { max-width: 75%; }
+}

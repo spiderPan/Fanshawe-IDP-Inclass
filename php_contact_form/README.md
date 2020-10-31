@@ -1,27 +1,23 @@
-#### PHP Contact Form Repo
-This is the Docker environment set up for PHP contact form
+# Email with AJAX
 
+This is a sample project using AJAX to handle mail submission. It's implemented with async / await and imported into the main JavaScript file as a module / component.
 
-#### Prerequisites
-1. Install `Docker` from [https://docs.docker.com/install/] 
-2. IF you are in Linux, install `docker-compose` from [https://docs.docker.com/install/]
+There's a (very) simple form that sends a user's first name, last name, email and message to an API endpoint; it has some extremely simple success / failure handling.
 
+## Installation
+Clone the repo to your local dev environment. This uses PHP on the back end, so you'll need something like WAMP or MAMP to run it (alternatively configure a Docker project and run it that way).
 
-#### Set up
-1. Clone the repo
-   ```
-   git clone git@github.com:spiderPan/Fanshawe-IDP-Inclass.git
-   ```
-2. Open the folder and run docker-compose
-   ```
-   cd php_contact_form
-   docker-compose up
-   ```
-3. When you finished work, you can turn if off by doing 
-   ```
-   docker-compose down
-   ```
+## Docker
+- Run `docker-compose up` and then visit the site in http://localhost:3040
+- Mailhog can be found in http://localhost:8025
 
-#### URLs
-1. Your project is up in `http://localhost:8080` which is mapping to the `php_contact_form` folder
-2. The Mailhog is in `http://localhost:8025`
+## Usage
+Pretty straightforward - navigate to the live instance and try submitting an email. The endpoint isn't connected to an API at this point - just a simple POST check and it returns back a success or error message, depending on the outcome.
+
+CSS is generated with SASS using the command line tools. You'll need dart-sass (preferred) - [you can get it here](https://sass-lang.com/install)
+
+## Credits
+TVR - this is a stripped-down example of async / await and API endpoint testing for Authoring Level 3. Not for production. Demo only!
+
+## License
+MIT
