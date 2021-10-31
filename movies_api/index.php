@@ -12,6 +12,10 @@ if (empty(getenv('IDP_ENVIRONMENT'))) {
     $app->setBasePath('/movies_api');
 }
 
+$app->addRoutingMiddleware();
+
+$errorMiddleware = $app->addErrorMiddleware(true, true, true);
+
 $app->get('/', function (Request $request, Response $response, $args) {
     $response->getBody()->write("Hello world! This is the Movie API!");
     return $response
